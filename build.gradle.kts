@@ -36,22 +36,9 @@ gradlePlugin {
         create("cataloger") {
             id = "dev.triumphteam.cataloger"
             displayName = "Cataloger"
-            description = "Yeah"
-            // tags.set(listOf("tags", "for", "your", "plugins"))
+            description = "Join and validate version catalogs before publishing them."
+            tags.set(listOf("version-catalog"))
             implementationClass = "dev.triumphteam.cataloger.CatalogerPlugin"
-        }
-    }
-}
-
-publishing {
-    repositories {
-        maven {
-            credentials {
-                username = System.getenv("REPO_USER")
-                password = System.getenv("REPO_PASS")
-            }
-
-            url = uri("https://repo.triumphteam.dev/snapshots/")
         }
     }
 }
